@@ -26,7 +26,7 @@ ngOnInit() {
 
   handleAskGPT() {
   let httpHeaders = new HttpHeaders()
-    .set("Authorization","Bearer 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");
+    .set("Authorization","Bearer ");
   let url = "https://api.openai.com/v1/chat/completions";
   let payload =  {
     model :"gpt-3.5-turbo",
