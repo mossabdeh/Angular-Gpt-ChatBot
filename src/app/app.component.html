@@ -1,7 +1,9 @@
 <nav class="p-3">
   <ul class="nav nav-pills">
     <li *ngFor="let action of actions">
-      <button (click)="handleRoute(action)" class="btn btn-outline-success ms-2">
+      <button
+        [ngClass]="action===currentAction? 'btn btn-success ms-2' : 'btn btn-outline-success ms-2'"
+        (click)="handleRoute(action)" >
         {{action.title}}
         <i class="bi bi-{{action.icon}}"></i>
       </button>

@@ -11,11 +11,12 @@ export class AppComponent {
     {route : "/home" , title : "Home" , icon : "house"},
     {route : "/gpt" , title : "GPT" , icon: "person"},
   ]
-  title = 'angular-Gpt-ChatBot';
+  currentAction : any;
 
   constructor(private router : Router) {
   }
   handleRoute(action: any) {
+    this.currentAction = action;
     this.router.navigateByUrl(action.route);
 
   }
